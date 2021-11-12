@@ -153,24 +153,36 @@ h6 {
 .hexagons {
 	display: flex;
 	flex-wrap: wrap;
+	padding-left: 42px;
 }
+
+/* 
+.hexagons::before {
+	content: "";
+	width: 42px;
+	float: left;
+	height: 100%;
+	shape-outside: repeating-linear-gradient(#0000 0 20px,#000 0 4px);
+  } */
 
 .hexagon-column {
 	display: flex;
 	flex-direction: column;
+	/* display: inline-block; */
+	/* height: 410px; */
 }
 
 .hexagon-column:nth-child(2n+1) .hexagon {
 	margin-top: 100px;
 }
 
-.hexagon-column:not(:first-child) {
+.hexagon-column {
 	margin-left: -42px;
 }
 
 .hexagon {
 	position: relative;
-	display: inline-block;
+	/* display: inline-block; */
 	width: 200px;
 	height: 200px;
 	clip-path: polygon(25% 3%, 75% 3%, 99% 50%, 75% 97%, 25% 97%, 1% 50%);
@@ -214,3 +226,16 @@ h6 {
 .hexagon.hexagon--neurons {}
 
 .hexagon.hexagon--rocket {}
+
+@media screen and (max-width: 390px) {
+	.hexagons {
+		padding-left: 0;
+		justify-content: center;
+	}
+
+	.hexagon-column {
+
+		margin-left: 0;
+	}
+
+}
