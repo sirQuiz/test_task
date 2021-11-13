@@ -151,13 +151,14 @@ h6 {
 }
 
 .hexagons {
-	display: flex;
+	display: flex; 
 	flex-wrap: wrap;
 	padding-left: 42px;
 }
 
 .hexagon {
 	position: relative;
+	/* float: left; */
 	width: 200px;
 	height: 200px;
 	margin-left: -42px;
@@ -167,7 +168,6 @@ h6 {
 .hexagon--toped {
 	margin-top: 100px;
 }
-
 
 .hexagon__title {
 	position: absolute;

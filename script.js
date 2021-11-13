@@ -3,20 +3,30 @@
           hexagons        = document.querySelectorAll(".js-hexagon");
 
         const hexaGrid = () => {
-            let hexagonsLineWidth  = hexagonsWrapper.offsetWidth / (hexagons[0].offsetWidth * 0.75),
-                hexagonsLine       = 1,
-                hexagonsLineNumber = 0;
+            let hexagonsLineWidth  = Math.floor(hexagonsWrapper.offsetWidth / (hexagons[0].offsetWidth * 0.75)),
+                hexagonsLine       = 1;
             
             hexagons.forEach((item, index) => {
-                if(index > hexagonsLine + hexagonsLineWidth){
+                item.classList.remove("hexagon--toped");
+
+                if(index + 1 > hexagonsLine * hexagonsLineWidth){
                     hexagonsLine++;
                 }
 
-                hexagonsLineNumber = index+1 - (hexagonsLine - 1) * hexagonsLineWidth;
-                
-                if(hexagonsLineNumber%2 == 0) {
+                console.log(hexagonsLine);
+                console.log(hexagonsLineWidth);
+                console.log(1 % 2);
+                console.log(0 % 2);
+                console.log(-1 % 2);
+
+
+
+                let hexagonsLineNumber = index + 1 - (hexagonsLine - 1) * hexagonsLineWidth;
+
+                if(hexagonsLineNumber % 2 == 0) {
                     item.classList.add("hexagon--toped");
-                }
+                } 
+         
             });
         };
         hexaGrid();        
