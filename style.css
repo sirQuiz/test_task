@@ -156,22 +156,6 @@ h6 {
 	padding-left: 42px;
 }
 
-/* 
-.hexagons::before {
-	content: "";
-	width: 42px;
-	float: left;
-	height: 100%;
-	shape-outside: repeating-linear-gradient(#0000 0 20px,#000 0 4px);
-  } */
-
-.hexagon-column {
-	display: flex;
-	flex-direction: column;
-	/* display: inline-block; */
-	/* height: 410px; */
-}
-
 .hexagon {
 	position: relative;
 	width: 200px;
