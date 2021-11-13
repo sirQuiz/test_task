@@ -172,21 +172,18 @@ h6 {
 	/* height: 410px; */
 }
 
-.hexagon-column:nth-child(2n+1) .hexagon {
+.hexagon {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	margin-left: -42px;
+	clip-path: polygon(25% 3%, 75% 3%, 99% 50%, 75% 97%, 25% 97%, 1% 50%);
+}
+
+.hexagon--toped {
 	margin-top: 100px;
 }
 
-.hexagon-column {
-	margin-left: -42px;
-}
-
-.hexagon {
-	position: relative;
-	/* display: inline-block; */
-	width: 200px;
-	height: 200px;
-	clip-path: polygon(25% 3%, 75% 3%, 99% 50%, 75% 97%, 25% 97%, 1% 50%);
-}
 
 .hexagon__title {
 	position: absolute;

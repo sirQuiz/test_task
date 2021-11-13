@@ -1,12 +1,21 @@
 (function() {
     const hexagonsWrapper = document.querySelector(".js-hexagons"),
-          hexagonsColumns = document.querySelectorAll(".js-hexagon-column"),
           hexagons        = document.querySelectorAll(".js-hexagon");
-          
-        window.addEventListener('resize', function(event) {
-            if(hexagonsWrapper.offsetWidth > window.offsetWidth) {
 
-            }
+        const hexaGrid = () => {
+            hexagons.forEach((item, index) => {
+                if(index%2 == 0) {
+                    item.classList.add("hexagon--toped");
+                }
+                console.log(index);
+                console.log(item);
+            });
+        };
+        hexaGrid();
+        
+        
+          window.addEventListener('resize', (event) => {
+            
         });
 
 }());
