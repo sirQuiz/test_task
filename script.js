@@ -15,18 +15,20 @@
 
                 console.log(hexagonsLine);
                 console.log(hexagonsLineWidth);
-                console.log(1 % 2);
-                console.log(0 % 2);
-                console.log(-1 % 2);
+                // console.log(1 % 2);
+                // console.log(0 % 2);
+                // console.log(-1 % 2);
 
-
-
-                let hexagonsLineNumber = index + 1 - (hexagonsLine - 1) * hexagonsLineWidth;
+                let hexagonsLineNumber = index - (hexagonsLine - 1) * hexagonsLineWidth;
 
                 if(hexagonsLineNumber % 2 == 0) {
                     item.classList.add("hexagon--toped");
                 } 
-         
+
+                if(hexagonsLine >= 2 && index > hexagonsLineWidth) {
+                    item.classList.add("hexagon--sticked");
+                    item.classList.remove("hexagon--toped");
+                }
             });
         };
         hexaGrid();        

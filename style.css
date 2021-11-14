@@ -98,7 +98,6 @@ h6 {
 .container {
 	width: 100%;
 	max-width: 2164px;
-	/* max-width: 1000px; */
 	margin: 0 auto;
 }
 
@@ -151,14 +150,15 @@ h6 {
 }
 
 .hexagons {
-	display: flex; 
+	/* display: flex; */
 	flex-wrap: wrap;
 	padding-left: 42px;
 }
 
 .hexagon {
+	zoom: 0.8;
 	position: relative;
-	/* float: left; */
+	float: left;
 	width: 200px;
 	height: 200px;
 	margin-left: -42px;
@@ -168,6 +168,11 @@ h6 {
 .hexagon--toped {
 	margin-top: 100px;
 }
+
+.hexagon--sticked {
+	margin-top: -100px;
+}
+
 
 .hexagon__title {
 	position: absolute;
@@ -208,15 +213,8 @@ h6 {
 
 .hexagon.hexagon--rocket {}
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 525px) {
 	.hexagons {
-		padding-left: 0;
 		justify-content: center;
 	}
-
-	.hexagon-column {
-
-		margin-left: 0;
-	}
-
 }
