@@ -150,15 +150,14 @@ h6 {
 }
 
 .hexagons {
-	/* display: flex; */
+	display: flex;
 	flex-wrap: wrap;
+	padding-top: 100px;
 	padding-left: 42px;
 }
 
 .hexagon {
-	zoom: 0.8;
 	position: relative;
-	float: left;
 	width: 200px;
 	height: 200px;
 	margin-left: -42px;
@@ -166,13 +165,8 @@ h6 {
 }
 
 .hexagon--toped {
-	margin-top: 100px;
-}
-
-.hexagon--sticked {
 	margin-top: -100px;
 }
-
 
 .hexagon__title {
 	position: absolute;
@@ -183,37 +177,7 @@ h6 {
 	transform: translate(-50%, -50%);
 }
 
-.hexagon.hexagon--music {
-	background-color: #ff0000;
-}
-
-.hexagon.hexagon--cars {
-	background-color: #205757;
-}
-
-.hexagon.hexagon--fashion {
-	background-color: #9939f3;
-}
-
-.hexagon.hexagon--computers {
-	background-color: #d2691e;
-}
-
-.hexagon.hexagon--technology {
-	background-color: #43454e;
-}
-
-.hexagon.hexagon--games {
-	background-color: #662020;
-}
-
-.hexagon.hexagon--keyboard {}
-
-.hexagon.hexagon--neurons {}
-
-.hexagon.hexagon--rocket {}
-
-@media screen and (max-width: 525px) {
+@media screen and (max-width: 545px) {
 	.hexagons {
 		justify-content: center;
 	}
